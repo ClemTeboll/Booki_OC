@@ -157,6 +157,7 @@ button {
     color: #ffffff;
     border: 1px solid #0065FC;
     border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
 }
 
 #filter {
