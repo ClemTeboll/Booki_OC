@@ -1,9 +1,11 @@
 @font-face {
-    font-family: 'Raleway';
-    src: url(./fonts/Raleway/),
-         url(./fonts/Raleway/Raleway-Regular.ttf),
-         url(./fonts/Raleway/Raleway-MediumItalic.ttf),
-         url(./fonts/Raleway/Raleway-SemiBold.ttf);
+    font-family: 'Raleway-Regular';
+    src: url(./fonts/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url(./fonts/Raleway/Raleway-SemiBold.ttf);
 }
 
 * {
@@ -15,20 +17,23 @@
 body {
     background-color: #ffffff;
     color: black;
-    font-family: 'Raleway';
+    font-family: 'Raleway-Regular';
 }
 
 h2 {
     font-size: 20px;
+    font-family: 'Raleway-Bold';
 }
 
 h3 {
     font-size: 17px;
     margin-bottom: 5px;
+    font-family: 'Raleway-Bold';
 }
 
 h4 {
     font-size: 16px;
+    font-family: 'Raleway-Bold';
 }
 
 figcaption p {
@@ -50,7 +55,7 @@ i {
 }
 
 .bold {
-    font-weight: bold;
+    font-family: 'Raleway-Bold';
 }
 
 main, .footer-sections {
@@ -144,10 +149,9 @@ input {
     height: 40px;
     width: 200px;
     font-size: 15px;
-    font-weight: bold;
+    font-family: 'Raleway-Bold';
     padding: 10px;
     border: 1px solid #F2F2F2;
-
 }
 
 button {
@@ -188,7 +192,7 @@ button {
 .filter-text {
     margin-left: 10px;
     margin-right: 20px;
-    font-weight: bold;
+    font-family: 'Raleway-Bold';
 }
 
 .filter .fa-money-bill-wave,
@@ -281,7 +285,7 @@ button {
 
 .more {
     margin-top: 20px;
-    font-weight: bold;
+    font-family: 'Raleway-Bold';
 }
 
 .more:hover {
@@ -394,7 +398,7 @@ figure .smallest-cart {
 }
 
 #activities figcaption {
-    font-weight: bold;
+    font-family: 'Raleway-Bold';
     padding: 15px
 }
 
@@ -423,7 +427,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media all and (min-width: 998px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     main, .footer-sections {
         max-width: 1000px;
         margin: auto;
@@ -467,13 +471,12 @@ footer a:hover {
     #activities figure {
         width: 450px;
     }
-    
 }
 
-@media all and (min-width: 769px) and (max-width: 997px) {
+@media screen and (max-width: 992px) {
 
     main, .footer-sections {
-        min-width: 770px;
+        min-width: 769px;
         max-width: 990px;
         margin: auto;
     }
@@ -598,4 +601,9 @@ footer a:hover {
 }
 
 @media all and (max-width: 768px) {
+
+    p {
+        color: red;
+    }
+
 }
