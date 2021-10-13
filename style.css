@@ -602,8 +602,151 @@ footer a:hover {
 
 @media all and (max-width: 768px) {
 
-    p {
-        color: red;
+    main, .footer-sections {
+        width: 100%;
     }
 
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    nav {
+        margin: 0px;
+        padding: 0px; 
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav ul li {
+        margin: 0px;
+        padding: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    form {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #filter {
+        max-width: 100%;
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #accommodation-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #accommodation-list {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    #accommodations {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    aside figure {
+        width: 100px;
+    }
+
+    .aside-title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #popular-hostels {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #recreational-activity {
+        width: 100%;
+    }
+
+    #activities {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #activities figure {
+        width: 100%;
+    }
+
+    .horizontal-photos {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .verticals-photos img {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    figure .tallest-cart {
+        height: auto;
+        width: 100%;
+    }
+    
+    figure .smallest-cart {
+        height: auto;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .footer-sections {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        padding: 30px;
+    }
 }
