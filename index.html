@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve">
         <!-- Open Graph data -->
         <meta property="og:title" content="Booki" />
@@ -43,26 +44,31 @@
                     <div class="input-fas">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <input type="search" name="search" id="search-bar" value="Marseille, France">
+                    <div id="search-bar">
+                        <input type="search" name="search" value="Marseille, France">
+                        <i class="fas fa-search"></i>
+                    </div>
                     <button>Rechercher</button>
                 </form>
                 <div id="filter">
                     <p class="bold">Filtres</p>
-                    <div class="filter">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <p class="filter-text">Économique</p>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-child"></i>
-                        <p class="filter-text">Familial</p>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-heart"></i>
-                        <p class="filter-text">Romantique</p>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-dog"></i>
-                        <p class="filter-text">Animaux autorisés</p>
+                    <div id="filter-categories">
+                        <div class="filter">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <p class="filter-text">Économique</p>
+                        </div>
+                        <div class="filter">
+                            <i class="fas fa-child"></i>
+                            <p class="filter-text">Familial</p>
+                        </div>
+                        <div class="filter">
+                            <i class="fas fa-heart"></i>
+                            <p class="filter-text">Romantique</p>
+                        </div>
+                        <div class="filter">
+                            <i class="fas fa-dog"></i>
+                            <p class="filter-text">Animaux autorisés</p>
+                        </div>
                     </div>
                 </div>
                 <div id="detail">

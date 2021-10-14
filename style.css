@@ -60,7 +60,6 @@ i {
 
 main, .footer-sections {
     max-width: 1440px;
-    min-width: 1000px;
 }
 
 main {
@@ -154,6 +153,10 @@ input {
     border: 1px solid #F2F2F2;
 }
 
+.fa-search {
+    display: none;
+}
+
 button {
     width: 100px;
     text-align: center;
@@ -165,14 +168,24 @@ button {
 }
 
 #filter {
-    max-width: 800px;
+    max-width: 850px;
     height: 40px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-direction: row;
     align-items: center;
     font-size: 15px;
+}
+
+#filter p {
+    margin-right: 30px;
+}
+
+#filter-categories {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .filter {
@@ -181,6 +194,7 @@ button {
     align-items: center;
     border: 2px solid #F2F2F2;
     border-radius: 50px 50px 50px 50px;
+    margin-left: 10px;
 }
 
 .filter:hover {
@@ -410,6 +424,7 @@ footer {
 
 .footer-sections {
     width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -427,7 +442,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 1200px) {
+@media all and (max-width: 1200px) {
     main, .footer-sections {
         max-width: 1000px;
         margin: auto;
@@ -439,6 +454,10 @@ footer a:hover {
 
     nav li a:active {
         color: #ffffff;
+    }
+
+    .fa-search {
+        display: none;
     }
 
     #accommodations figure {
@@ -473,10 +492,9 @@ footer a:hover {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media all and (max-width: 992px) {
 
     main, .footer-sections {
-        min-width: 769px;
         max-width: 990px;
         margin: auto;
     }
@@ -489,7 +507,8 @@ footer a:hover {
     }
     
     header h1 {
-        margin-top: 60px;
+        margin-top: 30px;
+        text-align: center;
     }
     
     .Booki-logo {
@@ -499,6 +518,7 @@ footer a:hover {
 
     nav li {
         list-style-type: none;
+        margin: auto;
     }
 
     nav li:active {
@@ -508,6 +528,11 @@ footer a:hover {
     nav li a:active {
         color: #ffffff;
     }
+
+    .fa-search {
+        display: none;
+    }
+
     #accommodation-list {
         width: 100%;
     }
@@ -602,6 +627,32 @@ footer a:hover {
 
 @media all and (max-width: 768px) {
 
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        font-size: 17px;
+        font-family: 'Raleway-Bold';
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-family: 'Raleway-Bold';
+    }
+    
+    h4 {
+        font-size: 15px;
+        font-family: 'Raleway-Bold';
+    }
+
+    p {
+        font-size: 15px;
+    }
+
     main, .footer-sections {
         width: 100%;
     }
@@ -610,47 +661,139 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
         width: 100%;
     }
 
-    nav {
-        margin: 0px;
-        padding: 0px; 
+    .Booki-logo {
+        height: 50px;
+        margin-top: 10px;
+        width: auto;
     }
 
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: start;
-        margin: 0px;
-        padding: 0px;
+        justify-content: space-between;
     }
 
-    nav ul li {
-        margin: 0px;
-        padding: 0px;
-        margin: 0px;
-        padding: 0px;
+    nav li {
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #F2F2F2;
+        text-align: center;
+    }
+
+    nav li a {
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+    
+    nav li:active {
+        color: #0065FC;
+        background-color: #ffffff;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    nav li a:active {
+        border-bottom: 2px solid #0065FC;
+        color: #0065FC;
+        background-color: #ffffff;
+    }
+
+    section#search-section {
+        width: 100%;
+        padding: 5%;
     }
 
     form {
-        margin: 0px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
         padding: 0px;
+        justify-content: center;
+    }
+
+    input {
+        border: none;
+        width: 250px;
+    }
+    
+    #search-bar {
+        border: 1px solid #F2F2F2;
+        display: flex;
+        flex-direction: row;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .fa-search {
+        display: block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #0065FC;
+        border-radius: 10px;
+    }
+
+    button {
+        display: none;
     }
     
     #filter {
-        max-width: 100%;
-        width: 200px;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
-        margin: 0px;
-        padding: 0px;
+    }
+
+    #filter p {
+        margin-bottom: 10px;
+    }
+    
+    #filter-categories {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+    }
+    
+    .filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 2px solid #F2F2F2;
+        border-radius: 50px 50px 50px 50px;
+        margin-left: 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .filter-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Raleway-Bold';
+        margin-bottom: 0px!important;
+        font-size: 13px;
+    }
+
+    #detail {
+        margin-top: 0px;
+        align-items: baseline;
+        font-size: 13px;
     }
 
     #accommodation-section {
@@ -663,6 +806,8 @@ footer a:hover {
     #accommodation-list {
         width: 100%;
         border-radius: 0px;
+        padding: 5%;
+        background-color: #ffffff;
     }
 
     #accommodations {
@@ -673,19 +818,59 @@ footer a:hover {
         flex-wrap: wrap;
     }
 
-    aside {
-        width: 100%;
-        border-radius: 0px;
-    }
-
-    aside figure {
-        width: 100px;
-    }
-
-    .aside-title {
+    #accommodations figure {
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    #accommodations figure img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px 20px 0px 0px;
+        margin-bottom: 10px;
+    }
+    
+    #accommodations figure figcaption {
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        border-radius: 0px;
+        padding: 5%;
+    }
+
+    .aside-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .fa-chart-line {
+        margin-bottom: 20px;
+    }
+
+    aside figure {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    aside figure img {
+        margin-bottom: 0px;
+        width: 45%;
+        border-radius: 20px 0px 0px 20px;
     }
 
     #popular-hostels {
@@ -698,44 +883,49 @@ footer a:hover {
 
     #recreational-activity {
         width: 100%;
+        padding: 5%;
     }
 
     #activities {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
+        height: auto;
+        margin-bottom: 0px;
     }
 
     #activities figure {
         width: 100%;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    #activities figure img {
+        width: 100%;
+        height: 120px;
     }
 
     .horizontal-photos {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+        height: none;
+        width: none;
+        margin: 0px;
     }
     
     .verticals-photos img {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        height: auto;
+        width: none;
+        height: none;
+        margin: 0px;
     }
     
     figure .tallest-cart {
-        height: auto;
-        width: 100%;
+        height: none;
+        width: none;
     }
     
     figure .smallest-cart {
-        height: auto;
-        width: 100%;
+        height: none;
+        width: none;
     }
 
     footer {
@@ -748,5 +938,9 @@ footer a:hover {
         justify-content: space-between;
         height: auto;
         padding: 30px;
+    }
+
+    .footer-sections div {
+        margin-bottom: 20px;
     }
 }
