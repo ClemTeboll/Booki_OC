@@ -154,7 +154,7 @@ input {
 }
 
 .fa-search {
-    display: none;
+    display: none!important;
 }
 
 button {
@@ -371,6 +371,7 @@ section#recreational-activity {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 15px;
 }
 
@@ -424,7 +425,6 @@ footer {
 
 .footer-sections {
     width: 80%;
-    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -440,56 +440,6 @@ footer {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-@media all and (max-width: 1200px) {
-    main, .footer-sections {
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    nav li:active {
-        background-color: #0065FC;
-    }
-
-    nav li a:active {
-        color: #ffffff;
-    }
-
-    .fa-search {
-        display: none;
-    }
-
-    #accommodations figure {
-        width: 280px;
-    }
-
-    #accommodations figure img {
-        height: 150px;
-    }
-
-    aside figure {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    aside figure img {
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 20px;
-    }
-
-    #activities {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between; 
-    }
-
-    #activities figure {
-        width: 450px;
-    }
 }
 
 @media all and (max-width: 992px) {
@@ -530,11 +480,7 @@ footer a:hover {
     }
 
     .fa-search {
-        display: none;
-    }
-
-    #accommodation-list {
-        width: 100%;
+        display: none!important;
     }
 
     #accommodation-section {
@@ -542,10 +488,22 @@ footer a:hover {
         flex-direction: column-reverse;
         justify-content: space-between;
         margin-bottom: 30px;
+    }
+
+    #accommodation-list {
         width: 100%;
+        padding: 3%!important;
+    }
+
+    #accommodations {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
 
     #accommodations figure {
+        margin: 10px;
         width: 240px;
     }
     
@@ -583,12 +541,14 @@ footer a:hover {
     #activities {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
     }
     
     #activities figure {
-        width: 450px;
+        width: 350px;
+        margin-right: 20px;
     }
     
     .horizontal-photos {
@@ -604,6 +564,7 @@ footer a:hover {
         justify-content: space-between;
         object-fit: cover;
         object-position: center;
+        margin-right: 10px;
     }
     
     figure .tallest-cart {
@@ -627,26 +588,19 @@ footer a:hover {
 
 @media all and (max-width: 768px) {
 
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-
     h2 {
         font-size: 17px;
-        font-family: 'Raleway-Bold';
         margin-bottom: 20px;
+        margin-top: 5px;
     }
     
     h3 {
         font-size: 15px;
         margin-bottom: 5px;
-        font-family: 'Raleway-Bold';
     }
     
     h4 {
         font-size: 15px;
-        font-family: 'Raleway-Bold';
     }
 
     p {
@@ -655,13 +609,14 @@ footer a:hover {
 
     main, .footer-sections {
         width: 100%;
+        margin: 0px;
+        padding: 0px;
     }
 
     header {
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
+        margin-bottom: 0px;    
     }
 
     .Booki-logo {
@@ -670,31 +625,23 @@ footer a:hover {
         width: auto;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     nav li {
         width: 50%;
         padding-top: 20px;
         padding-bottom: 10px;
-        margin-left: 0px;
-        margin-right: 0px;
         margin-bottom: 10px;
         border-bottom: 2px solid #F2F2F2;
         text-align: center;
     }
 
+    nav li:hover {
+        border-bottom: 2px solid #0065FC;
+        border-top: 2px solid #ffffff;
+    }
+
     nav li a {
-        margin-right: 0px;
         margin-left: 0px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-left: 0px;
         padding-bottom: 10px;
-        padding-right: 0px;
     }
     
     nav li:active {
@@ -710,15 +657,12 @@ footer a:hover {
     }
 
     section#search-section {
-        width: 100%;
         padding: 5%;
+        margin-bottom: 0px;
     }
 
     form {
-        margin: auto;
         margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 0px;
         justify-content: center;
     }
 
@@ -735,13 +679,12 @@ footer a:hover {
     }
 
     .fa-search {
-        display: block;
         width: 40px;
         height: 40px;
-        display: flex;
+        color: white;
+        display: flex!important;
         justify-content: center;
         align-items: center;
-        color: white;
         background-color: #0065FC;
         border-radius: 10px;
     }
@@ -758,101 +701,81 @@ footer a:hover {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-    }
-
-    #filter p {
         margin-bottom: 10px;
     }
     
     #filter-categories {
-       display: flex;
        flex-wrap: wrap;
-       align-items: center;
+       margin-top: 5px;
     }
     
     .filter {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border: 2px solid #F2F2F2;
-        border-radius: 50px 50px 50px 50px;
         margin-left: 0px;
         margin-right: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     .filter-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Raleway-Bold';
-        margin-bottom: 0px!important;
         font-size: 13px;
     }
 
     #detail {
-        margin-top: 0px;
-        align-items: baseline;
         font-size: 13px;
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
 
     #accommodation-section {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
-        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0px;
     }
 
     #accommodation-list {
-        width: 100%;
-        border-radius: 0px;
-        padding: 5%;
+        margin: 0%;
+        padding: 0%;
         background-color: #ffffff;
+        width: 100%;
     }
 
     #accommodations {
-        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #accommodations a {
+        width: 100%;
     }
 
     #accommodations figure {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
+        margin: 0%;
         margin-bottom: 10px;
     }
 
     #accommodations figure img {
         width: 100%;
         height: 120px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 20px 20px 0px 0px;
-        margin-bottom: 10px;
     }
     
     #accommodations figure figcaption {
-        margin-left: 15px;
-        margin-top: 5px;
         margin-bottom: 5px;
-        display: flex;
-        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .more {
+        margin-bottom: 0px;
     }
 
     aside {
         width: 100%;
-        border-radius: 0px;
         padding: 5%;
-    }
-
-    .aside-title {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        border-radius: 0px;
     }
 
     .fa-chart-line {
@@ -874,68 +797,36 @@ footer a:hover {
     }
 
     #popular-hostels {
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     #recreational-activity {
-        width: 100%;
         padding: 5%;
+        margin-top: 0px!important;
+        margin-bottom: 0px!important;
     }
 
     #activities {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: auto;
-        margin-bottom: 0px;
     }
 
     #activities figure {
         width: 100%;
-        margin: 0px;
-        margin-bottom: 20px;
+        margin: 0%;
+        margin-bottom: 10px;
     }
 
     #activities figure img {
-        width: 100%;
         height: 120px;
-    }
-
-    .horizontal-photos {
-        height: none;
-        width: none;
-        margin: 0px;
-    }
-    
-    .verticals-photos img {
-        width: none;
-        height: none;
-        margin: 0px;
-    }
-    
-    figure .tallest-cart {
-        height: none;
-        width: none;
-    }
-    
-    figure .smallest-cart {
-        height: none;
-        width: none;
-    }
-
-    footer {
-        width: 100%;
     }
 
     .footer-sections {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         height: auto;
         padding: 30px;
     }
