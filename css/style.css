@@ -1,11 +1,7 @@
 @font-face {
-    font-family: 'Raleway-Regular';
-    src: url(../fonts/Raleway/Raleway-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Raleway-Bold';
-    src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap'),
+         url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 }
 
 * {
@@ -17,23 +13,23 @@
 body {
     background-color: #ffffff;
     color: black;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
 }
 
 h2 {
     font-size: 20px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 h3 {
     font-size: 16px;
     margin-bottom: 5px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 footer h2 {
     font-size: 16px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 figcaption p {
@@ -55,7 +51,7 @@ i {
 }
 
 .bold {
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 main {
@@ -145,7 +141,7 @@ input {
     height: 40px;
     width: 200px;
     font-size: 15px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
     padding: 10px;
     border: 1px solid #F2F2F2;
 }
@@ -203,7 +199,7 @@ button {
 .filter-text {
     margin-left: 10px;
     margin-right: 20px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 .filter .fa-money-bill-wave,
@@ -299,7 +295,7 @@ button {
 
 .more {
     margin-top: 20px;
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
 }
 
 .more:hover {
@@ -413,7 +409,7 @@ figure .smallest-cart {
 }
 
 #activities figcaption {
-    font-family: 'Raleway-Bold';
+    font-weight: bold;
     padding: 15px;
     display: flex;
 }
