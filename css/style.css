@@ -447,13 +447,6 @@ footer a:hover {
         max-width: 990px;
         margin: auto;
     }
-
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
     
     header h1 {
         margin-top: 30px;
@@ -466,7 +459,6 @@ footer a:hover {
     }
 
     nav li {
-        list-style-type: none;
         margin: auto;
     }
 
@@ -495,16 +487,15 @@ footer a:hover {
     }
 
     #accommodations {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
         margin-top: 10px;
+    }
+
+    #accommodations a {
+        width: 33%;
     }
 
     #accommodations figure {
         margin: 10px;
-        width: 240px;
     }
     
     #accommodations figure img {
@@ -525,10 +516,14 @@ footer a:hover {
         flex-wrap: wrap;
     }
 
+    aside a {
+        width: 30%;
+    }
+
     aside figure {
         display: flex;
         flex-direction: column;
-        width: 240px;
+        width: 100%;
     }
 
     aside figure img {
@@ -550,40 +545,6 @@ footer a:hover {
     #activities figure {
         width: 350px;
         margin-right: 20px;
-    }
-    
-    .horizontal-photos {
-        height: 435px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    .verticals-photos img {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        object-fit: cover;
-        object-position: center;
-        margin-right: 10px;
-    }
-    
-    figure .tallest-cart {
-        height: 210px;
-        width: 100%;
-    }
-    
-    figure .smallest-cart {
-        height: 150px;
-        width: 100%;
-    }
-
-    .footer-sections {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 200px;
-        padding: 30px 0px 30px 0px;
     }
 }
 
@@ -698,11 +659,7 @@ footer a:hover {
     #filter {
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
         margin-bottom: 10px;
     }
     
@@ -729,9 +686,6 @@ footer a:hover {
     }
 
     #accommodation-section {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
         margin-bottom: 0px;
     }
 
@@ -740,14 +694,6 @@ footer a:hover {
         padding: 0%;
         background-color: #ffffff;
         width: 100%;
-    }
-
-    #accommodations {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin: 0px;
-        padding: 0px;
     }
 
     #accommodations a {
@@ -776,12 +722,15 @@ footer a:hover {
 
     aside {
         width: 100%;
-        padding: 5%;
         border-radius: 0px;
     }
 
     .fa-chart-line {
         margin-bottom: 20px;
+    }
+
+    aside a {
+        width: 100%;
     }
 
     aside figure {
